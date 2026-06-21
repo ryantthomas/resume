@@ -21,22 +21,9 @@
       font-weight: bold;
       font-size: 1.2em;
     }
-    .skills-table td, .skills-table th {
+    .skill-line {
       font-size: 0.85rem;
-      padding: 0.2em 0.6em;
-      border: none;
-      vertical-align: top;
-    }
-    .skills-table td:first-child {
-      font-weight: 600;
-      white-space: nowrap;
-      width: 11em;
-    }
-    .summary {
-      font-size: 0.9rem;
-      color: #444;
-      text-align: center;
-      margin-bottom: 0.4em;
+      margin: 0.1em 0;
     }
   </style>
 </head>
@@ -44,53 +31,26 @@
   <div class="px-4 py-3">
 
     <!-- Header -->
-    <section class="has-text-centered mb-1">
+    <section class="has-text-centered mb-2">
       <h1 class="title is-2 m-1 p-1">Ryan Thomas</h1>
       <p class="is-size-7">
-        📍 Alexandria, VA &nbsp;·&nbsp;
-        📞 (336) 813-2235 &nbsp;·&nbsp;
-        ✉️ <a href="mailto:ryanthomas624@gmail.com">ryanthomas624@gmail.com</a> &nbsp;·&nbsp;
-        <a href="https://github.com/ryantthomas">github.com/ryantthomas</a> &nbsp;·&nbsp;
+        Alexandria, VA &nbsp;|&nbsp;
+        (336) 813-2235 &nbsp;|&nbsp;
+        <a href="mailto:ryanthomas624@gmail.com">ryanthomas624@gmail.com</a> &nbsp;|&nbsp;
+        <a href="https://github.com/ryantthomas">github.com/ryantthomas</a> &nbsp;|&nbsp;
         <a href="https://www.linkedin.com/in/ryan-t-thomas/">linkedin.com/in/ryan-t-thomas</a>
       </p>
-      <p class="summary mt-2">Analytics and AI engineer. I build data pipelines, AI workflows, and self-service analytics systems that replace manual work.</p>
     </section>
 
     <!-- Skills -->
     <section class="mb-2">
       <div class="section-title">Skills</div>
-      <table class="skills-table" style="width:100%">
-        <tbody>
-          <tr>
-            <td>AI &amp; LLM</td>
-            <td>Claude API · multi-agent systems · XML prompt engineering · document extraction &amp; processing</td>
-          </tr>
-          <tr>
-            <td>Data Engineering</td>
-            <td>dbt · dlt · SQL · Alteryx · pandas</td>
-          </tr>
-          <tr>
-            <td>Cloud &amp; Infra</td>
-            <td>AWS (Lambda · Step Functions · Glue · S3 · CloudWatch) · Terraform</td>
-          </tr>
-          <tr>
-            <td>BI &amp; Reporting</td>
-            <td>Tableau · Power BI · TMDL semantic layer</td>
-          </tr>
-          <tr>
-            <td>Languages</td>
-            <td>Python · SQL · JavaScript · HTML/CSS</td>
-          </tr>
-          <tr>
-            <td>Databases</td>
-            <td>MS SQL Server · PostgreSQL</td>
-          </tr>
-          <tr>
-            <td>Other</td>
-            <td>Git · REST APIs · Jira · Salesforce</td>
-          </tr>
-        </tbody>
-      </table>
+      <p class="skill-line"><strong>AI and LLM:</strong> Claude API, MCP development, multi-agent systems, XML prompt engineering, document extraction</p>
+      <p class="skill-line"><strong>Data Engineering:</strong> dbt, dlt, SQL, pandas</p>
+      <p class="skill-line"><strong>Cloud:</strong> AWS (Lambda, Step Functions, Glue, S3, CloudWatch), Terraform, Cloudflare</p>
+      <p class="skill-line"><strong>BI:</strong> Tableau, Power BI, TMDL semantic layer</p>
+      <p class="skill-line"><strong>Languages:</strong> Python, SQL, JavaScript</p>
+      <p class="skill-line"><strong>Databases:</strong> MS SQL Server, PostgreSQL</p>
     </section>
 
     <!-- Experience -->
@@ -100,20 +60,21 @@
       <!-- NFWF -->
       <div class="is-flex columns mb-0 mt-2">
         <div class="column" style="flex-grow: 4">
-          <strong>Analytics &amp; AI Engineer</strong> <span class="has-text-grey-dark is-size-7">(Enterprise Reporting Specialist)</span>, National Fish and Wildlife Foundation
+          <strong>Enterprise Reporting Specialist</strong>, National Fish and Wildlife Foundation
         </div>
         <div class="column has-text-right is-size-7">
-          Jul 2024 – Present <br>📍 Washington, DC
+          Jul 2024 - Present<br>Washington, DC
         </div>
       </div>
       <ul class="mt-0 desc">
-        <li>Built a dbt data model across 3 databases (accounting, two EGMS systems) with 25+ marts powering all org reporting.</li>
-        <li>Designed and deployed AWS infrastructure with Terraform — Lambda, Step Functions, Glue, S3, CloudWatch — to orchestrate all data pipelines.</li>
-        <li>Built 12+ production AI workflows using Claude API and multi-agent architectures: fundraising lead sourcing, compliance review scanning, document extraction, expenditure verification (days → minutes).</li>
-        <li>Built an org-wide TMDL semantic layer connecting Power BI and Claude for self-service analytics across 150+ staff.</li>
-        <li>Engineered XML-structured prompt patterns for deterministic, reproducible AI workflows.</li>
-        <li>Integrated dlt and dbt for ELT pipelines across enterprise APIs (EGMS, CostPoint, Jira).</li>
-        <li>Manage Tableau environment and 100+ reports organization-wide.</li>
+        <li>dbt data model across 3 databases (accounting, two EGMS systems) with 25+ marts; foundation for all org reporting.</li>
+        <li>Sole developer of AWS data infrastructure in Terraform: Lambda, Step Functions, Glue, S3, and CloudWatch orchestrating all pipelines.</li>
+        <li>12+ production AI workflows using Claude API and multi-agent architectures, including fundraising lead sourcing, compliance review scanning, document extraction, and expenditure verification (processing time cut from days to minutes).</li>
+        <li>Collaborated on an MCP server deployed to Cloudflare, including a tool that generates guardrailed SQL against the dbt model through Claude.</li>
+        <li>TMDL semantic layer connecting Power BI and Claude for self-service analytics across 150+ staff.</li>
+        <li>XML-structured prompts across all AI workflows for deterministic, reproducible outputs.</li>
+        <li>ELT pipelines via dlt and dbt across enterprise APIs (EGMS, CostPoint, Jira).</li>
+        <li>Manages Tableau environment and 100+ reports organization-wide.</li>
       </ul>
 
       <!-- Cisco -->
@@ -122,14 +83,14 @@
           <strong>High Touch Operations Manager</strong>, Cisco Systems
         </div>
         <div class="column has-text-right is-size-7">
-          Jul 2020 – Jun 2024<br>📍 Herndon, VA
+          Jul 2020 - Jun 2024<br>Herndon, VA
         </div>
       </div>
       <ul class="mt-0 desc">
-        <li>Automated QBR metrics pipeline: Salesforce API → Excel via macro, eliminating manual data export and prep.</li>
+        <li>Automated QBR metrics by pulling Salesforce API data to Excel via macro, eliminating manual export and prep.</li>
         <li>Built Jira dashboards tracking service request SLAs across AT&T account.</li>
-        <li>Led cross-functional coordination between Cisco engineers and AT&T network team during complex hardware/software escalations.</li>
-        <li>Owned weekly and quarterly technical presentations to AT&T's network engineering leadership.</li>
+        <li>Led cross-functional coordination between Cisco engineers and AT&T network team during hardware and software escalations.</li>
+        <li>Owned weekly and quarterly technical presentations to AT&T network engineering leadership.</li>
       </ul>
 
       <!-- Charter -->
@@ -138,11 +99,11 @@
           <strong>Analytics Developer Intern</strong>, Charter Communications
         </div>
         <div class="column has-text-right is-size-7">
-          May 2019 – Aug 2019<br>📍 Maryland Heights, MO
+          May 2019 - Aug 2019<br>Maryland Heights, MO
         </div>
       </div>
       <ul class="mt-0 desc">
-        <li>Built SQL → Alteryx → Tableau pipeline for multi-source accounting data; results used by directors for project budget risk decisions.</li>
+        <li>Built a SQL, Alteryx, and Tableau pipeline for multi-source accounting data used by directors for project budget risk decisions.</li>
       </ul>
     </section>
 
@@ -151,7 +112,7 @@
       <div class="section-title">Education</div>
       <div class="is-flex columns mb-0 mt-2">
         <div class="column" style="flex-grow: 5">
-          <strong>B.S. in Statistics &amp; Analytics and Computer Science</strong>, University of North Carolina at Chapel Hill
+          <strong>B.S. in Statistics and Analytics and Computer Science</strong>, University of North Carolina at Chapel Hill
         </div>
         <div class="column has-text-right is-size-7">
           May 2020<br>Chapel Hill, NC
