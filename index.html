@@ -3,113 +3,162 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Professional Resume</title>
+  <title>Ryan Thomas — Resume</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
   <style>
-
     body {
       background: white;
       padding: 0rem;
       color: black;
     }
     .desc {
-    font-size: 0.9rem;
+      font-size: 0.9rem;
     }
     .section-title {
       border-bottom: 1px solid #ccc;
       margin-top: 0.5em;
-      margin-bottom: 0em;
+      margin-bottom: 0.3em;
       font-weight: bold;
       font-size: 1.2em;
+    }
+    .skills-table td, .skills-table th {
+      font-size: 0.85rem;
+      padding: 0.2em 0.6em;
+      border: none;
+      vertical-align: top;
+    }
+    .skills-table td:first-child {
+      font-weight: 600;
+      white-space: nowrap;
+      width: 11em;
+    }
+    .summary {
+      font-size: 0.9rem;
+      color: #444;
+      text-align: center;
+      margin-bottom: 0.4em;
     }
   </style>
 </head>
 <body>
-  <div>
-    <section class="has-text-centered">
-      <h1 class="title is-2 m-1 p-1">Ryan Thomas</h1>
-      <p>📍 Alexandria, VA · 📞 (336) 813-2235 · ✉️ ryanthomas624@gmail.com · <a href="https://github.com/ryantthomas">github.com/ryantthomas</a></p>
-    </section>
-        
+  <div class="px-4 py-3">
 
-    <section class="">
-      <div class="section-title ">Skills</div>
-      <p class="has-text-centered desc">Programming (Python, SQL, Javascript, HTML/CSS)
-        · APIs
-        · Business Intelligence Tools (Tableau & Power BI)
-        · Databases (MS SQL Server)
-        · Spreadsheets
-        · Data Analysis
-        · Web Development
-        · Project Management
-        · Communication
-        · Business Processes
-        · IT System Administration
-        · Business Application Integrations
- 
-    </p>
+    <!-- Header -->
+    <section class="has-text-centered mb-1">
+      <h1 class="title is-2 m-1 p-1">Ryan Thomas</h1>
+      <p class="is-size-7">
+        📍 Alexandria, VA &nbsp;·&nbsp;
+        📞 (336) 813-2235 &nbsp;·&nbsp;
+        ✉️ <a href="mailto:ryanthomas624@gmail.com">ryanthomas624@gmail.com</a> &nbsp;·&nbsp;
+        <a href="https://github.com/ryantthomas">github.com/ryantthomas</a> &nbsp;·&nbsp;
+        <a href="https://www.linkedin.com/in/ryan-t-thomas/">linkedin.com/in/ryan-t-thomas</a>
+      </p>
+      <p class="summary mt-2">Analytics and AI engineer. I build data pipelines, AI workflows, and self-service analytics systems that replace manual work.</p>
     </section>
-    <section class="content"> 
-      <div class="section-title ">Experience</div>
-      <div class="is-flex columns mb-0">
+
+    <!-- Skills -->
+    <section class="mb-2">
+      <div class="section-title">Skills</div>
+      <table class="skills-table" style="width:100%">
+        <tbody>
+          <tr>
+            <td>AI &amp; LLM</td>
+            <td>Claude API · multi-agent systems · XML prompt engineering · document extraction &amp; processing</td>
+          </tr>
+          <tr>
+            <td>Data Engineering</td>
+            <td>dbt · dlt · SQL · Alteryx · pandas</td>
+          </tr>
+          <tr>
+            <td>Cloud &amp; Infra</td>
+            <td>AWS (Lambda · Step Functions · Glue · S3 · CloudWatch) · Terraform</td>
+          </tr>
+          <tr>
+            <td>BI &amp; Reporting</td>
+            <td>Tableau · Power BI · TMDL semantic layer</td>
+          </tr>
+          <tr>
+            <td>Languages</td>
+            <td>Python · SQL · JavaScript · HTML/CSS</td>
+          </tr>
+          <tr>
+            <td>Databases</td>
+            <td>MS SQL Server · PostgreSQL</td>
+          </tr>
+          <tr>
+            <td>Other</td>
+            <td>Git · REST APIs · Jira · Salesforce</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Experience -->
+    <section class="content mb-2">
+      <div class="section-title">Experience</div>
+
+      <!-- NFWF -->
+      <div class="is-flex columns mb-0 mt-2">
         <div class="column" style="flex-grow: 4">
-          <strong>Enterprise Reporting Specialist</strong>, National Fish and Wildlife Foundation
+          <strong>Analytics &amp; AI Engineer</strong> <span class="has-text-grey-dark is-size-7">(Enterprise Reporting Specialist)</span>, National Fish and Wildlife Foundation
         </div>
         <div class="column has-text-right is-size-7">
-          Jul 2024 - Present <br>📍 Washington, DC
+          Jul 2024 – Present <br>📍 Washington, DC
         </div>
       </div>
       <ul class="mt-0 desc">
-        <li>Led the implementation of an organization-wide data and reporting system by managing the transition from legacy reporting softwares to modern business intelligence solutions.</li>
-        <li>Builds and manages 100+ data solutions annually using SQL, Python, Tableau, Power BI and web applications.</li>
-        <li>Aligns technology systems with business requirements and manages user transitions to new data systems.</li>
-        <li>Develops and oversees data pipelines connecting to enterprise application APIs and databases (EGMS, CostPoint, Jira, other APIs) to support software integration.
-        </li>
+        <li>Built a dbt data model across 3 databases (accounting, two EGMS systems) with 25+ marts powering all org reporting.</li>
+        <li>Designed and deployed AWS infrastructure with Terraform — Lambda, Step Functions, Glue, S3, CloudWatch — to orchestrate all data pipelines.</li>
+        <li>Built 12+ production AI workflows using Claude API and multi-agent architectures: fundraising lead sourcing, compliance review scanning, document extraction, expenditure verification (days → minutes).</li>
+        <li>Built an org-wide TMDL semantic layer connecting Power BI and Claude for self-service analytics across 150+ staff.</li>
+        <li>Engineered XML-structured prompt patterns for deterministic, reproducible AI workflows.</li>
+        <li>Integrated dlt and dbt for ELT pipelines across enterprise APIs (EGMS, CostPoint, Jira).</li>
+        <li>Manage Tableau environment and 100+ reports organization-wide.</li>
       </ul>
-            <div class="is-flex columns  mb-0">
+
+      <!-- Cisco -->
+      <div class="is-flex columns mb-0">
         <div class="column" style="flex-grow: 4">
           <strong>High Touch Operations Manager</strong>, Cisco Systems
         </div>
         <div class="column has-text-right is-size-7">
-          Jul 2020 - Jun 2024<br>📍 Herndon, VA
+          Jul 2020 – Jun 2024<br>📍 Herndon, VA
         </div>
       </div>
       <ul class="mt-0 desc">
-      <li>Owned the presentation of technical service requests and their metrics in weekly meetings and quarterly reviews to promote the value of Cisco’s service offerings.</li>
-      <li>Ensured superior delivery of technical support with a large service provider customer by facilitating communication across departments, resolving process issues, and advocating for customers.</li>
-      <li>Established trust as the first point of contact for customers for issues related to Cisco’s reactive support, particularly during escalations.</li>
-      <li>Analyzed technical support operations for improvement and tracks progress of support, leading to well-documented processes and efficient resolutions to issues.</li>
-    </ul>
+        <li>Automated QBR metrics pipeline: Salesforce API → Excel via macro, eliminating manual data export and prep.</li>
+        <li>Built Jira dashboards tracking service request SLAs across AT&T account.</li>
+        <li>Led cross-functional coordination between Cisco engineers and AT&T network team during complex hardware/software escalations.</li>
+        <li>Owned weekly and quarterly technical presentations to AT&T's network engineering leadership.</li>
+      </ul>
 
-      <div class="is-flex columns  mb-0">
+      <!-- Charter -->
+      <div class="is-flex columns mb-0">
         <div class="column" style="flex-grow: 4">
           <strong>Analytics Developer Intern</strong>, Charter Communications
         </div>
         <div class="column has-text-right is-size-7">
-          May 2019 - Aug 2019<br>📍 Maryland Heights, MO
+          May 2019 – Aug 2019<br>📍 Maryland Heights, MO
         </div>
       </div>
       <ul class="mt-0 desc">
-        <li>Empowered accounting data from separate, uncleaned sources to be interpretted by department directors. 
-            Cleaned data through reproducible workflows that run as new project data is collected.</li>
-        <li>Enabled informed expense planning for software projects by organizing accounting data 
-            into presentable Tableau dashboards. The dashboards alerted directors of excess spending patterns 
-            and measured the risk of exceeding project budget.</li> 
-    </ul>
+        <li>Built SQL → Alteryx → Tableau pipeline for multi-source accounting data; results used by directors for project budget risk decisions.</li>
+      </ul>
     </section>
-          <section>
-      <div class="section-title ">Education</div>
-    <div class="is-flex columns mb-0">
-        <div class="column" style="flex-grow: 5">
 
-          <strong>B.S. in Statistics and Analytics & Computer Science</strong>, University of North Carolina 
-            
+    <!-- Education -->
+    <section>
+      <div class="section-title">Education</div>
+      <div class="is-flex columns mb-0 mt-2">
+        <div class="column" style="flex-grow: 5">
+          <strong>B.S. in Statistics &amp; Analytics and Computer Science</strong>, University of North Carolina at Chapel Hill
         </div>
-        <div class="column has-text-right">
-            Chapel Hill, NC<br>
+        <div class="column has-text-right is-size-7">
+          May 2020<br>Chapel Hill, NC
         </div>
-    </div>
+      </div>
     </section>
+
   </div>
 </body>
 </html>
