@@ -25,6 +25,20 @@
       font-size: 0.85rem;
       margin: 0.1em 0;
     }
+    .job-row {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-top: 0.5em;
+      margin-bottom: 0;
+    }
+    .job-title { flex: 1; }
+    .job-date {
+      flex-shrink: 0;
+      font-size: 0.8rem;
+      white-space: nowrap;
+      text-align: right;
+    }
     @media print {
       @page {
         margin: 0.4in;
@@ -35,17 +49,14 @@
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
-      /* Tighten Bulma column padding */
-      .columns { margin: 0 !important; }
-      .column { padding: 0.1rem 0.4rem !important; }
-      /* Section spacing */
       .mb-2 { margin-bottom: 0.2rem !important; }
+      .mb-3 { margin-bottom: 0.35rem !important; }
       .mt-2 { margin-top: 0.1rem !important; }
-      /* Bullet lists */
       ul.desc { margin: 0 0 0.1rem !important; }
       ul.desc li { margin-bottom: 0.05rem; line-height: 1.35; }
       p { margin-bottom: 0.15rem !important; }
       a { color: inherit; text-decoration: none; }
+      .job-row { margin-top: 0.3em; gap: 0.5rem; }
     }
   </style>
 </head>
@@ -53,9 +64,9 @@
   <div class="px-4 py-2">
 
     <!-- Header -->
-    <section class="mb-2">
+    <section class="mb-3">
       <h1 class="title is-3 mb-1 mt-0">Ryan Thomas</h1>
-      <p class="is-size-7">
+      <p class="is-size-7 mt-0 mb-0">
         Alexandria, VA &nbsp;|&nbsp;
         (336) 813-2235 &nbsp;|&nbsp;
         <a href="mailto:ryanthomas624@gmail.com">ryanthomas624@gmail.com</a> &nbsp;|&nbsp;
@@ -67,7 +78,7 @@
     <!-- Skills -->
     <section class="mb-2">
       <div class="section-title">Skills</div>
-      <p class="skill-line"><strong>Databases & Infrastructure:</strong> Relational (SQL Server, SQLite, PostgreSQL), Warehouse (Athena, BigQuery), Graph & NoSQL Structures, Pipeline Orchestration</p>  
+      <p class="skill-line"><strong>Databases & Infrastructure:</strong> Relational (SQL Server, SQLite, PostgreSQL), Warehouse (Athena, BigQuery), Graph & NoSQL Structures, Pipeline Orchestration</p>
       <p class="skill-line"><strong>Cloud:</strong> AWS (Lambda, Glue, S3, CloudWatch), GCP, Cloudflare, Terraform</p>
       <p class="skill-line"><strong>Analytics:</strong> ETL/ELT, dbt, SQL, pandas</p>
       <p class="skill-line"><strong>BI & AI:</strong> MCP development, AI Data & Content Infrastructure, Agent Orchestration, Tableau, Power BI, and Emerging Tools</p>
@@ -80,13 +91,11 @@
       <div class="section-title">Experience</div>
 
       <!-- NFWF -->
-      <div class="is-flex columns mb-0 mt-2">
-        <div class="column" style="flex-grow: 4">
+      <div class="job-row">
+        <div class="job-title">
           <strong>Enterprise Reporting Specialist</strong>, National Fish and Wildlife Foundation
         </div>
-        <div class="column has-text-right is-size-7">
-          Jul 2024 - Present<br>Washington, DC
-        </div>
+        <div class="job-date">Jul 2024 - Present · Washington, DC</div>
       </div>
       <ul class="mt-0 desc">
         <li>Develops and manages a central data model with dbt, spanning multiple enterprise applications with 25+ marts.</li>
@@ -98,13 +107,11 @@
       </ul>
 
       <!-- Cisco -->
-      <div class="is-flex columns mb-0">
-        <div class="column" style="flex-grow: 4">
+      <div class="job-row">
+        <div class="job-title">
           <strong>High Touch Operations Manager</strong>, Cisco Systems
         </div>
-        <div class="column has-text-right is-size-7">
-          Jul 2020 - Jun 2024<br>Herndon, VA
-        </div>
+        <div class="job-date">Jul 2020 - Jun 2024 · Herndon, VA</div>
       </div>
       <ul class="mt-0 desc">
         <li>Automated QBR metrics by pulling Salesforce API data to Excel via macro, eliminating manual export and prep for weekly and quarterly reviews.</li>
@@ -114,13 +121,11 @@
       </ul>
 
       <!-- Charter -->
-      <div class="is-flex columns mb-0">
-        <div class="column" style="flex-grow: 4">
+      <div class="job-row">
+        <div class="job-title">
           <strong>Analytics Developer Intern</strong>, Charter Communications
         </div>
-        <div class="column has-text-right is-size-7">
-          May 2019 - Aug 2019<br>Maryland Heights, MO
-        </div>
+        <div class="job-date">May 2019 - Aug 2019 · Maryland Heights, MO</div>
       </div>
       <ul class="mt-0 desc">
         <li>Built an Alteryx pipeline connecting multi-source SQL accounting data to Tableau dashboards, enabling directors to track budget risk and flag excess spending across software projects.</li>
@@ -130,13 +135,11 @@
     <!-- Education -->
     <section>
       <div class="section-title">Education</div>
-      <div class="is-flex columns mb-0 mt-2">
-        <div class="column" style="flex-grow: 5">
+      <div class="job-row">
+        <div class="job-title">
           <strong>B.S. in Statistics &amp; Analytics, Computer Science</strong>, University of North Carolina at Chapel Hill
         </div>
-        <div class="column has-text-right is-size-7">
-          May 2020<br>Chapel Hill, NC
-        </div>
+        <div class="job-date">May 2020 · Chapel Hill, NC</div>
       </div>
     </section>
 
